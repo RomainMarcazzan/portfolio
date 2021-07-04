@@ -1,0 +1,17 @@
+@import "./utils/variables";
+@import "./utils/media-querries";
+
+@import "./base/base";
+@import "./base/typography";
+
+@import "./layout/container";
+
+@import "./components/overlay";
+@import "./components/banner";
+@import "./components/navBar";
+@import "./components/navBarHome";
+
+@import "./pages/homePage";
+@import "./pages/aboutPage";
+@import "./pages/contactPage";
+@import "./pages/projectsPage";

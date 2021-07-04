@@ -1,0 +1,10 @@
+.contactPage {
+  height: 100vh;
+  background-color: $greenContact;
+  display: flex;
+  flex-direction: column;
+
+  .contactPage__phone {
+    cursor: pointer;
+  }
+}

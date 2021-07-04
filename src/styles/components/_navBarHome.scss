@@ -1,0 +1,45 @@
+.navBarHome {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50vh;
+  .logo__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    svg {
+      display: block;
+      height: 150px;
+      overflow: visible;
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      margin-top: 10px;
+      font-size: 2rem;
+      position: relative;
+      cursor: pointer;
+      color: $whiteFont;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        display: block;
+        margin-top: 5px;
+        right: 0;
+        background: $whiteFont;
+        transition: 0.4s ease;
+      }
+      &:hover {
+        color: $whiteFont;
+        &:after {
+          width: 100%;
+          left: 0;
+          background: $whiteFont;
+        }
+      }
+    }
+  }
+}

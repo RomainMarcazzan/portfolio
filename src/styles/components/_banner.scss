@@ -1,0 +1,32 @@
+.banner {
+  z-index: 1;
+  color: $whiteFont;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50vh;
+  &__name {
+    display: flex;
+    overflow: hidden;
+    padding-left: 100px;
+    // padding-top: 100px;
+    .animate-letters {
+      display: flex;
+      margin-right: 10px;
+      font-size: 3rem;
+    }
+  }
+
+  &__title {
+    display: flex;
+    overflow: hidden;
+    font-size: 2rem;
+    padding-left: 210px;
+  }
+
+  &__description {
+    width: 400px;
+    padding-left: 150px;
+    padding-top: 50px;
+  }
+}

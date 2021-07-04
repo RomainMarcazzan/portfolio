@@ -1,0 +1,17 @@
+.navBar {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 50px;
+  color: $blackHome;
+  font-weight: 400;
+  .activeNav {
+    transition: all 0.2s ease-in-out;
+  }
+  .activeNav:hover {
+    transform: scale(1.1);
+  }
+  .noHover:hover {
+    transform: inherit;
+  }
+}

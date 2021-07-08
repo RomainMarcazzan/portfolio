@@ -1,4 +1,21 @@
 .projectsPage {
   height: 100vh;
   background-color: $redProjects;
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+    &__left {
+      width: 50vw;
+    }
+
+    &__right {
+      margin: 0;
+      padding: 0;
+      & video {
+        width: 50vw;
+      }
+    }
+  }
 }

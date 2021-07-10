@@ -11,14 +11,18 @@ const Banner = () => {
       </div>
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { delay: 1.5, duration: 1 } }}
+        animate={{ opacity: 1, transition: { delay: 1, duration: 0.5 } }}
         className="banner__title"
       >
         développeur Web & App
       </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0, transition: { delay: 2, duration: 1 } }}
+        animate={{
+          opacity: 1,
+          y: 0,
+          transition: { delay: 1.2, duration: 0.5 },
+        }}
         className="banner__description"
       >
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit rerum

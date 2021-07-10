@@ -1,8 +1,12 @@
 .navBar {
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  top: 30px;
   font-size: 1.5rem;
   display: flex;
   justify-content: space-evenly;
-  padding: 50px;
   color: $blackHome;
   font-weight: 400;
   .activeNav {

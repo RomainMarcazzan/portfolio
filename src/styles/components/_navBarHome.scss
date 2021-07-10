@@ -6,7 +6,6 @@
   .logo__container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     svg {
       display: block;
@@ -16,11 +15,12 @@
     a {
       display: block;
       text-decoration: none;
-      margin-top: 10px;
       font-size: 2rem;
       position: relative;
       cursor: pointer;
       color: $whiteFont;
+      margin-bottom: 20px;
+
       &:after {
         content: "";
         position: absolute;

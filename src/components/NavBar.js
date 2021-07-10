@@ -1,22 +1,24 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
-const NavBar = () => {
+const NavBar = ({ isShown }) => {
   const activeStyle = {
     fontWeight: "700",
   };
   return (
     <motion.div
       initial={{ opacity: 0, y: -180 }}
-      animate={{
-        opacity: 1,
-        y: 0,
-        transition: {
-          ease: "easeInOut",
-          duration: 1,
-          delay: 0.4,
-        },
-      }}
+      animate={
+        isShown && {
+          opacity: 1,
+          y: 0,
+          transition: {
+            ease: "easeInOut",
+            duration: 0.8,
+            delay: 0.2,
+          },
+        }
+      }
       exit={{ opacity: 0 }}
       className="navBar"
     >

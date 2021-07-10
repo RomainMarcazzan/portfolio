@@ -9,9 +9,9 @@ const HomePage = () => {
       initial={{ scaleY: 0 }}
       animate={{
         scaleY: 1,
-        transition: { duration: 1 },
+        transition: { duration: 0.8 },
       }}
-      exit={{ scaleY: 0, transition: { duration: 1 } }}
+      exit={{ scaleY: 0, transition: { duration: 0.8 } }}
       className="homePage"
     >
       <Banner />

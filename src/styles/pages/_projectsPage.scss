@@ -1,20 +1,56 @@
 .projectsPage {
-  height: 100vh;
   background-color: $redProjects;
-
+  position: relative;
   &__container {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    height: 100vh;
 
-    &__left {
-      width: 50vw;
+    &__top {
+      height: 75%;
+      & video {
+        height: 100%;
+        width: 100%;
+
+        object-fit: fill;
+      }
+      &--overlay {
+        background-color: $redProjects;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 75%;
+      }
     }
 
-    &__right {
-      margin: 0;
-      padding: 0;
-      & video {
-        width: 50vw;
+    &__bottom {
+      height: 25%;
+      display: flex;
+      align-items: center;
+      width: 100vw;
+
+      & ul {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100vw;
+        & li {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          list-style: none;
+          text-transform: uppercase;
+          color: white;
+          font-size: 2rem;
+          font-weight: 700;
+          cursor: pointer;
+          & span {
+            font-size: 0.8rem;
+            color: $blackHome;
+            text-transform: none;
+          }
+        }
       }
     }
   }

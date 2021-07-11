@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import NavBar from "../components/NavBar";
 import groupomania from "../assets/videos/groupomania.mp4";
 import netflix_clone from "../assets/videos/netflix.mp4";

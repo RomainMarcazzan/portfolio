@@ -9,7 +9,6 @@
     display: flex;
     overflow: hidden;
     padding-left: 100px;
-    // padding-top: 100px;
     .animate-letters {
       display: flex;
       margin-right: 10px;
@@ -22,6 +21,14 @@
     overflow: hidden;
     font-size: 2rem;
     padding-left: 210px;
+    & span:nth-child(1) {
+      color: $redProjects;
+      margin: auto 5px;
+    }
+    & span:nth-child(2) {
+      color: $greenContact;
+      margin: auto 5px;
+    }
   }
 
   &__description {

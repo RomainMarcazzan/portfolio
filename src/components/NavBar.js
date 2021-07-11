@@ -7,19 +7,17 @@ const NavBar = ({ isShown }) => {
   };
   return (
     <motion.div
-      initial={{ opacity: 0, y: -180 }}
+      initial={{ y: -180 }}
       animate={
         isShown && {
-          opacity: 1,
           y: 0,
           transition: {
             ease: "easeInOut",
             duration: 0.5,
-            delay: 0.2,
           },
         }
       }
-      exit={{ opacity: 0 }}
+      // exit={{ opacity: 0 }}
       className="navBar"
     >
       <NavLink

@@ -8,48 +8,9 @@
   justify-content: center;
   align-items: center;
   &__card {
-    position: relative;
     border: 1px solid white;
     width: 20vw;
     cursor: grab;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    height: 20vh;
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-  }
-  &__card2 {
-    border: 1px solid white;
-    position: absolute;
-    cursor: grab;
-    top: 55vh;
-    right: 20vw;
-    width: 20vw;
-    z-index: 2;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    height: 20vh;
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-  }
-  &__card3 {
-    border: 1px solid white;
-    position: absolute;
-    cursor: grab;
-    top: 20vh;
-    left: 17vw;
-    width: 20vw;
-    z-index: 2;
     color: white;
     padding: 20px;
     text-align: center;

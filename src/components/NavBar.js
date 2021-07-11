@@ -14,7 +14,7 @@ const NavBar = ({ isShown }) => {
           y: 0,
           transition: {
             ease: "easeInOut",
-            duration: 0.8,
+            duration: 0.5,
             delay: 0.2,
           },
         }

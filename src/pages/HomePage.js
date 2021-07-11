@@ -6,12 +6,15 @@ import NavBarHome from "../components/NavBarHome";
 const HomePage = () => {
   return (
     <motion.div
-      initial={{ scaleY: 0 }}
-      animate={{
-        scaleY: 1,
-        transition: { duration: 0.8 },
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{
+        type: "spring",
+        mass: 0.35,
+        stiffness: 75,
+        duration: 0.3,
       }}
-      exit={{ scaleY: 0, transition: { duration: 0.8 } }}
       className="homePage"
     >
       <Banner />

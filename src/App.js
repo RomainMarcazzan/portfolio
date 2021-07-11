@@ -8,7 +8,7 @@ import ContactPage from "./pages/ContactPage";
 function App() {
   const location = useLocation();
   return (
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence exitBeforeEnter initial={false}>
       <Switch location={location} key={location.pathname}>
         <Route path="/" exact component={HomePage} />
         <Route path="/about" component={AboutPage} />

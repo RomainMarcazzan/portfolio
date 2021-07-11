@@ -11,7 +11,7 @@ const Banner = () => {
       </div>
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { delay: 1, duration: 0.5 } }}
+        animate={{ opacity: 1, transition: { delay: 0.5, duration: 0.3 } }}
         className="banner__title"
       >
         développeur Web & App
@@ -21,7 +21,7 @@ const Banner = () => {
         animate={{
           opacity: 1,
           y: 0,
-          transition: { delay: 1.2, duration: 0.5 },
+          transition: { delay: 0.2, duration: 0.3 },
         }}
         className="banner__description"
       >

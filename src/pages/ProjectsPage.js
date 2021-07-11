@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import NavBar from "../components/NavBar";
 import groupomania from "../assets/videos/groupomania.mp4";
 import netflix_clone from "../assets/videos/netflix.mp4";
@@ -31,12 +31,15 @@ const ProjectsPage = () => {
   });
   return (
     <motion.div
-      initial={{ scaleX: 0 }}
-      animate={{
-        scaleX: 1,
-        transition: { duration: 0.8 },
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{
+        type: "spring",
+        mass: 0.35,
+        stiffness: 75,
+        duration: 0.3,
       }}
-      exit={{ scaleX: 0, transition: { duration: 0.8 } }}
       className="projectsPage"
     >
       {selectedVideo.show ? <NavBar /> : <NavBar isShown />}
@@ -56,16 +59,12 @@ const ProjectsPage = () => {
                 ? {
                     height: "0%",
                     transition: {
-                      duration: 0.4,
-                      // ease: [0.6, 0.05, -0.01, 0.9],
                       ease: "easeIn",
                     },
                   }
                 : {
                     height: "75%",
                     transition: {
-                      duration: 0.3,
-                      // ease: [0.6, 0.05, -0.01, 0.9],
                       ease: "easeOut",
                     },
                   }

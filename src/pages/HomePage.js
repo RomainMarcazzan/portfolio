@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import Banner from "../components/Banner";
 import NavBarHome from "../components/NavBarHome";
-
 const HomePage = () => {
   return (
     <motion.div

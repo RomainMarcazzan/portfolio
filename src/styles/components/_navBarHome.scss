@@ -3,13 +3,34 @@
   justify-content: space-around;
   align-items: center;
   height: 50vh;
+
+  @include media(">phone", "<=tablet") {
+    height: inherit;
+    .logo__container {
+      padding-bottom: 10vh;
+      svg {
+        height: 10vh !important;
+      }
+    }
+  }
+
+  @include media("<=phone") {
+    height: inherit;
+    .logo__container {
+      padding-bottom: 10vh;
+      svg {
+        height: 8vh !important;
+      }
+    }
+  }
+
   .logo__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     svg {
       display: block;
-      height: 150px;
+      height: 20vh;
       overflow: visible;
     }
     a {

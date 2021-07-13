@@ -10,10 +10,10 @@ const AboutPage = () => {
   };
 
   const dragConstraints = {
-    top: -50,
-    left: -50,
-    right: 50,
-    bottom: 50,
+    top: -70,
+    left: -70,
+    right: 70,
+    bottom: 70,
   };
 
   return (
@@ -37,6 +37,12 @@ const AboutPage = () => {
           drag
           dragConstraints={dragConstraints}
           className="aboutPage__card"
+          style={{
+            position: "absolute",
+            top: "30vh",
+            right: "40vw",
+            zIndex: "1",
+          }}
         >
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias
           dolor vel doloribus aliquid. Dolorem quo impedit illum aliquid ab,

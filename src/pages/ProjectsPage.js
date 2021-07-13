@@ -4,6 +4,7 @@ import NavBar from "../components/NavBar";
 import groupomania from "../assets/videos/groupomania.mp4";
 import netflix_clone from "../assets/videos/netflix.mp4";
 const ProjectsPage = () => {
+  const devise = window.innerWidth;
   const videoRoutes = [
     {
       id: 0,
@@ -25,7 +26,8 @@ const ProjectsPage = () => {
     },
   ];
   const [selectedVideo, setSelectedVideo] = useState({
-    show: false,
+    showVideo: false,
+    showNav: true,
     video: null,
     key: null,
   });
@@ -42,7 +44,7 @@ const ProjectsPage = () => {
       }}
       className="projectsPage"
     >
-      {selectedVideo.show ? <NavBar /> : <NavBar isShown />}
+      {selectedVideo.showNav ? <NavBar isShown /> : <NavBar />}
       <div className="projectsPage__container">
         <div className="projectsPage__container__top">
           <video
@@ -55,7 +57,7 @@ const ProjectsPage = () => {
           <motion.div
             initial={{ height: "75%" }}
             animate={
-              selectedVideo.show
+              selectedVideo.showVideo
                 ? {
                     height: "0%",
                     transition: {
@@ -79,17 +81,34 @@ const ProjectsPage = () => {
                 key={videoRoute.id}
                 onHoverStart={() => {
                   setSelectedVideo({
-                    show: true,
+                    showVideo: true,
+                    showNav: false,
                     video: videoRoute.ref.current,
                     key: videoRoute.id,
                   });
                 }}
                 onHoverEnd={() => {
                   setSelectedVideo({
-                    show: false,
+                    showVideo: false,
+                    showNav: true,
                     video: null,
                     key: null,
                   });
+                }}
+                onClick={() => {
+                  devise > 768
+                    ? setSelectedVideo({
+                        showVideo: true,
+                        showNav: false,
+                        video: videoRoute.ref.current,
+                        key: videoRoute.id,
+                      })
+                    : setSelectedVideo({
+                        showVideo: true,
+                        showNav: true,
+                        video: videoRoute.ref.current,
+                        key: videoRoute.id,
+                      });
                 }}
               >
                 {videoRoute.title} <span>{videoRoute.technos}</span>

@@ -16,7 +16,7 @@ export default function Model(props) {
     <group ref={group} {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
-          <group rotation={[-Math.PI / 2, 0, 0]} scale={[12, 12, 12]}>
+          <group rotation={[-Math.PI / 2, 0, 0]}>
             <mesh
               geometry={nodes.BezierCurve_Material_0.geometry}
               material={materials.Material}

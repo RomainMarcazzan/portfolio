@@ -5,6 +5,7 @@ import Model from "../utils/Scene";
 import NavBar from "../components/NavBar";
 import { OrbitControls, Center, Text } from "@react-three/drei";
 const ContactPage = () => {
+  const devise = window.innerWidth;
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -26,7 +27,11 @@ const ContactPage = () => {
         <ambientLight intensity={1} />
         <Suspense fallback={null}>
           <Center>
-            <Model className="contactPage__phone" rotation={[0, -1.2, 0]} />
+            <Model
+              className="contactPage__phone"
+              scale={devise <= 768 ? [8, 8, 8] : [12, 12, 12]}
+              rotation={[0, -1.2, 0]}
+            />
           </Center>
         </Suspense>
         <OrbitControls
@@ -38,7 +43,7 @@ const ContactPage = () => {
           color="white" // default
           anchorX="center" // default
           anchorY="middle"
-          fontSize="0.4"
+          fontSize={devise <= 768 ? "0.2" : "0.4"}
           position={[0, 2, 0]}
           rotation={[-1, -0.2, 0]}
         >

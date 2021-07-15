@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 const NavBarHome = () => {
   return (
     <motion.div exit={{ opacity: 0 }} className="navBarHome">
-      <div className="logo__container">
+      <div className="navBarHome__container">
         <motion.span
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1.5 }}
         >
-          <Link to="/about">About</Link>
+          <Link to="/about">Profil</Link>
         </motion.span>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
           <motion.path
@@ -24,13 +24,13 @@ const NavBarHome = () => {
           ></motion.path>
         </svg>
       </div>
-      <div className="logo__container">
+      <div className="navBarHome__container">
         <motion.span
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1.5 }}
         >
-          <Link to="/projects">Projects</Link>
+          <Link to="/projects">Projets</Link>
         </motion.span>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
           <motion.path
@@ -44,7 +44,7 @@ const NavBarHome = () => {
           ></motion.path>
         </svg>
       </div>
-      <div className="logo__container">
+      <div className="navBarHome__container">
         <motion.span
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

@@ -35,7 +35,7 @@ const NavBar = ({ isShown }) => {
         activeStyle={activeStyle}
         to="/about"
       >
-        About
+        Profil
       </NavLink>
       <NavLink
         className="activeNav"
@@ -43,7 +43,7 @@ const NavBar = ({ isShown }) => {
         activeStyle={activeStyle}
         to="/projects"
       >
-        Projects
+        Projets
       </NavLink>
       <NavLink
         className="activeNav"

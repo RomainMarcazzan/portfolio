@@ -2,45 +2,21 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 50vh;
-
-  @include media(">phone", "<=tablet") {
-    height: inherit;
-    .logo__container {
-      padding-bottom: 10vh;
-      svg {
-        height: 10vh !important;
-      }
-    }
-  }
-
-  @include media("<=phone") {
-    height: inherit;
-    .logo__container {
-      padding-bottom: 10vh;
-      svg {
-        height: 8vh !important;
-      }
-    }
-  }
-
-  .logo__container {
+  &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     svg {
-      display: block;
-      height: 20vh;
+      height: 4rem;
       overflow: visible;
     }
     a {
       display: block;
       text-decoration: none;
-      font-size: 2rem;
+      padding-bottom: 1.5vh;
       position: relative;
       cursor: pointer;
       color: $whiteFont;
-      margin-bottom: 20px;
 
       &:after {
         content: "";
@@ -48,7 +24,7 @@
         width: 0;
         height: 2px;
         display: block;
-        margin-top: 5px;
+        margin-top: 2px;
         right: 0;
         background: $whiteFont;
         transition: 0.4s ease;
@@ -60,6 +36,20 @@
           background: $whiteFont;
         }
       }
+    }
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .navBarHome {
+    &__container {
+      & svg {
+        height: 7rem;
+      }
+    }
+
+    a {
+      font-size: 2rem;
     }
   }
 }

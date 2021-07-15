@@ -1,77 +1,122 @@
 .banner {
   display: flex;
-  color: $whiteFont;
-  height: 50vh;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-
-  @include media(">phone", "<=tablet") {
-    flex-direction: column;
-    height: inherit;
-    justify-content: inherit;
-    &__left {
-      padding-top: 2vh;
-    }
-    &__right {
-      height: inherit;
-    }
-  }
-
-  @include media("<=phone") {
-    flex-direction: column;
-    height: inherit;
-    justify-content: inherit;
-    &__left {
-      padding-top: 2vh;
-      &__name {
-        padding-left: 2vw;
-        .animate-letters {
-          font-size: 2rem !important;
-        }
-      }
-      &__title {
-        font-size: 1.5rem !important;
-      }
-
-      &__description {
-        width: auto !important;
-      }
-    }
-    &__right {
-      height: inherit;
-    }
-  }
+  justify-content: space-between;
+  color: $whiteFont;
 
   &__left {
     display: flex;
     flex-direction: column;
+    padding: 3vw;
+
     &__name {
       display: flex;
       .animate-letters {
         display: flex;
         margin-right: 1vw;
-        font-size: 3rem;
+        font-size: 1.5rem;
         overflow: hidden;
       }
     }
     &__title {
-      display: flex;
-      overflow: hidden;
-      font-size: 2rem;
+      font-size: 1.2rem;
       padding-left: 8vw;
+      & span:nth-child(1) {
+        margin-right: 1.2vw;
+      }
+      & span:nth-child(2) {
+        color: $redProjects;
+      }
+      & span:nth-child(3) {
+        color: $greenContact;
+      }
     }
     &__description {
-      width: 400px;
-      padding-left: 5vw;
-      padding-top: 3vh;
+      padding: 2vh;
     }
   }
   &__right {
-    height: 50vh;
-    img {
-      object-fit: cover;
-      height: 80%;
-      padding-top: 10%;
+    position: relative;
+
+    & img:nth-child(1) {
+      width: 70vw;
+      border: 2px solid $pinkAbout;
+      border-radius: 50%;
+    }
+    & img:nth-child(2) {
+      position: absolute;
+      border: 2px solid $pinkAbout;
+      border-radius: 50%;
+      width: 70vw;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .banner {
+    flex-direction: row;
+    justify-content: center;
+    &__left {
+      width: 50vw;
+
+      &__name {
+        .animate-letters {
+          margin-right: 1vw;
+          font-size: 2.5rem;
+        }
+      }
+      &__title {
+        font-size: 2rem;
+        padding-left: 4vw;
+      }
+      &__description {
+        padding: 2vh;
+        font-size: 1.5rem;
+      }
+    }
+    &__right {
+      & img:nth-child(1) {
+        width: 30vw;
+      }
+      & img:nth-child(2) {
+        width: 30vw;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .banner {
+    flex-direction: row;
+    justify-content: center;
+    &__left {
+      width: 50vw;
+
+      &__name {
+        .animate-letters {
+          margin-right: 1vw;
+          font-size: 3.5rem;
+        }
+      }
+      &__title {
+        font-size: 2rem;
+        padding-left: 12vw;
+      }
+      &__description {
+        padding: 2vh;
+        font-size: 1.5rem;
+      }
+    }
+    &__right {
+      & img:nth-child(1) {
+        width: 22vw;
+      }
+      & img:nth-child(2) {
+        width: 22vw;
+      }
     }
   }
 }

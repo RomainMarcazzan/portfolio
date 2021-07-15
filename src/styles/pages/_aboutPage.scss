@@ -4,62 +4,64 @@
   background-position: center;
   height: 100vh;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @include media("<=tablet") {
-    &__card {
-      font-size: 1.2rem !important;
-      width: 50vw !important;
+  &__container {
+    & div:nth-child(1) {
+      position: absolute;
+      top: 72vh;
+      right: 8vw;
+      z-index: 1;
     }
-    &__container div:nth-child(1) {
-      top: 45vh !important;
-      right: 20vw !important;
+    & div:nth-child(2) {
+      position: absolute;
+      top: 29vh;
+      right: 27vw;
+      z-index: 1;
     }
-    &__container div:nth-child(2) {
-      top: 65vh !important;
-      right: 10vw !important;
-    }
-    &__container div:nth-child(3) {
-      top: 25vh !important;
-      left: 10vw !important;
-      color: black;
+    & div:nth-child(3) {
+      position: absolute;
+      top: 11vh;
+      right: 51vw;
+      z-index: 1;
     }
   }
 
-  @include media("<=phone") {
-    &__card {
-      font-size: 1.2rem !important;
-      width: 50vw !important;
-    }
-    &__container div:nth-child(1) {
-      top: 44vh !important;
-      right: 20vw !important;
-    }
-    &__container div:nth-child(2) {
-      top: 70vh !important;
-      right: 10vw !important;
-    }
-    &__container div:nth-child(3) {
-      top: 15vh !important;
-      left: 10vw !important;
-      color: black;
-    }
-  }
   &__card {
-    font-size: 1.5rem;
     width: 20vw;
     cursor: grab;
     color: white;
-    padding: 1vw;
+    padding: 3vw;
     text-align: center;
     height: auto;
+    width: 40vw;
     background: rgba(255, 255, 255, 0.05);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(2.5px);
+    -webkit-backdrop-filter: blur(2.5px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .aboutPage {
+    &__container {
+      font-size: 1.2rem;
+      & div:nth-child(1) {
+        top: 72vh;
+        right: 10vw;
+      }
+      & div:nth-child(2) {
+        top: 40vh;
+        right: 40vw;
+      }
+      & div:nth-child(3) {
+        top: 18vh;
+        right: 60vw;
+      }
+    }
+
+    &__card {
+      width: 20vw;
+    }
   }
 }

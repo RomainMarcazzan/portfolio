@@ -10,10 +10,10 @@ const AboutPage = () => {
   };
 
   const dragConstraints = {
-    top: -70,
-    left: -70,
-    right: 70,
-    bottom: 70,
+    top: -50,
+    left: -50,
+    right: 50,
+    bottom: 50,
   };
 
   return (
@@ -32,58 +32,38 @@ const AboutPage = () => {
       <NavBar isShown />
       <div className="aboutPage__container">
         <motion.div
+          initial={{ x: 100 }}
+          animate={animate}
+          drag
+          dragConstraints={dragConstraints}
+          dragElastic={1}
+          className="aboutPage__card"
+        >
+          BACKEND: Express, Sequelize, MySql, MongoDb, Firebase...
+        </motion.div>
+        <motion.div
           initial={{ y: 200, x: -100 }}
           animate={animate}
           drag
           dragConstraints={dragConstraints}
+          dragElastic={1}
           className="aboutPage__card"
-          style={{
-            position: "absolute",
-            top: "30vh",
-            right: "40vw",
-            zIndex: "1",
-          }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias
-          dolor vel doloribus aliquid. Dolorem quo impedit illum aliquid ab,
-          enim quibusdam harum delectus fugiat excepturi ea, architecto, minima
-          esse quos.
+          Je suis développeur, diplômé Bac+2, basé à Saint Denis de la Réunion.
+          J'utilise des technologies JavaScript modernes pour la création de
+          sites web et applications mobiles. N'hésitez pas à me contacter pour
+          parler de votre projet.
         </motion.div>
         <motion.div
           initial={{ x: 100 }}
           animate={animate}
           drag
           dragConstraints={dragConstraints}
+          dragElastic={1}
           className="aboutPage__card"
-          style={{
-            position: "absolute",
-            top: "55vh",
-            right: "20vw",
-            zIndex: "2",
-          }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias
-          dolor vel doloribus aliquid. Dolorem quo impedit illum aliquid ab,
-          enim quibusdam harum delectus fugiat excepturi ea, architecto, minima
-          esse quos.
-        </motion.div>
-        <motion.div
-          initial={{ x: 100 }}
-          animate={animate}
-          drag
-          dragConstraints={dragConstraints}
-          className="aboutPage__card"
-          style={{
-            position: "absolute",
-            top: "20vh",
-            left: "17vw",
-            zIndex: "2",
-          }}
-        >
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias
-          dolor vel doloribus aliquid. Dolorem quo impedit illum aliquid ab,
-          enim quibusdam harum delectus fugiat excepturi ea, architecto, minima
-          esse quos.
+          FRONTEND: React, Redux, Context Api, hooks, React-Native, Sass,
+          ThreeJS...
         </motion.div>
       </div>
     </motion.div>

@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import NavBar from "../components/NavBar";
 import groupomania from "../assets/videos/groupomania.mp4";
 import netflix_clone from "../assets/videos/netflix.mp4";
+import meal_app from "../assets/videos/meal-app.mp4";
+
 const ProjectsPage = () => {
   const devise = window.innerWidth;
   const videoRoutes = [
@@ -10,19 +12,19 @@ const ProjectsPage = () => {
       id: 0,
       title: "groupomania",
       ref: useRef(groupomania),
-      technos: "React,Express,Sequelize,MySql...",
+      technos: "React, Express, Sequelize, MySql...",
     },
     {
       id: 1,
       title: "netflix clone",
       ref: useRef(netflix_clone),
-      technos: "React,Sass,Firebase,Stripe...",
+      technos: "React, Sass, Firebase, Stripe...",
     },
     {
       id: 2,
-      title: "amazon clone",
-      ref: useRef(netflix_clone),
-      technos: "React,Sass,Firebase,Stripe...",
+      title: "meal app",
+      ref: useRef(meal_app),
+      technos: "React Native, Expo, Redux...",
     },
   ];
   const [selectedVideo, setSelectedVideo] = useState({

@@ -43,11 +43,11 @@ const ContactPage = () => {
           color="white" // default
           anchorX="center" // default
           anchorY="middle"
-          fontSize={devise <= 768 ? "0.2" : "0.4"}
+          fontSize={devise <= 768 ? "0.3" : "0.4"}
           position={[0, 2, 0]}
-          rotation={[-1, -0.2, 0]}
+          rotation={[0, 0, 0]}
         >
-          +33 (0)7.82.96.05.29
+          +262 (0)6.92.25.32.94
         </Text>
       </Canvas>
       <div className="contactPage__info">
@@ -56,7 +56,9 @@ const ContactPage = () => {
           animate={{ x: 0, transition: { duration: 0.5 } }}
           className="contactPage__info__email"
         >
-          romain.marcazzan@hotmail.com
+          <a href="mailto: romain.marcazzan@hotmail.com">
+            romain.marcazzan@hotmail.com
+          </a>
         </motion.div>
         <motion.div
           initial={{ x: 150 }}
@@ -70,7 +72,7 @@ const ContactPage = () => {
         <div className="contactPage__info__social">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
             <motion.path
-              stroke="#f6e8ea"
+              stroke="white"
               fill="none"
               strokeWidth="20"
               initial={{ pathLength: 0 }}
@@ -81,7 +83,7 @@ const ContactPage = () => {
           </svg>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
             <motion.path
-              stroke="#f6e8ea"
+              stroke="white"
               fill="none"
               strokeWidth="20"
               initial={{ pathLength: 0 }}
@@ -92,7 +94,7 @@ const ContactPage = () => {
           </svg>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
             <motion.path
-              stroke="#f6e8ea"
+              stroke="white"
               fill="none"
               strokeWidth="20"
               initial={{ pathLength: 0 }}

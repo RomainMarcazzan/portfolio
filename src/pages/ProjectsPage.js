@@ -55,7 +55,8 @@ const ProjectsPage = () => {
             autoPlay
             loop
             muted
-          ></video>
+            controls
+          />
           <motion.div
             initial={{ height: "75%" }}
             animate={

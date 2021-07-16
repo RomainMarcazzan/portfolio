@@ -28,8 +28,8 @@ const AnimateLetters = ({ title }) => {
       initial="initial"
       animate="animate"
     >
-      {[...title].map((letter) => (
-        <motion.div key={letter} className="letter" variants={letterAnim}>
+      {[...title].map((letter, index) => (
+        <motion.div key={index} className="letter" variants={letterAnim}>
           {letter}
         </motion.div>
       ))}

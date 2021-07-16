@@ -37,20 +37,8 @@
     }
   }
   &__right {
-    position: relative;
-
-    & img:nth-child(1) {
+    & img {
       width: 70vw;
-      border: 2px solid $pinkAbout;
-      border-radius: 50%;
-    }
-    & img:nth-child(2) {
-      position: absolute;
-      border: 2px solid $pinkAbout;
-      border-radius: 50%;
-      width: 70vw;
-      left: 0;
-      top: 0;
     }
   }
 }
@@ -78,10 +66,7 @@
       }
     }
     &__right {
-      & img:nth-child(1) {
-        width: 30vw;
-      }
-      & img:nth-child(2) {
+      & img {
         width: 30vw;
       }
     }
@@ -111,10 +96,7 @@
       }
     }
     &__right {
-      & img:nth-child(1) {
-        width: 22vw;
-      }
-      & img:nth-child(2) {
+      & img {
         width: 22vw;
       }
     }

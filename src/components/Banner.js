@@ -1,7 +1,6 @@
 import React from "react";
 import AnimateLetters from "./AnimateLetters";
 import { motion } from "framer-motion";
-import profile from "../assets/photos/profile.png";
 import portrait from "../assets/photos/portrait.png";
 
 const Banner = () => {
@@ -21,11 +20,11 @@ const Banner = () => {
           <span>Web</span> & <span>App</span>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{
             opacity: 1,
             y: 0,
-            transition: { delay: 0.2, duration: 0.3 },
+            transition: { delay: 0.2, duration: 0.5 },
           }}
           className="banner__left__description"
         >
@@ -39,19 +38,10 @@ const Banner = () => {
         <motion.img
           initial={{ opacity: 0 }}
           animate={{
-            opacity: 1,
-            transition: { delay: 1, duration: 0.5, ease: "easeOut" },
+            opacity: 0.8,
+            transition: { delay: 0.5, duration: 1, ease: "easeOut" },
           }}
           src={portrait}
-          alt="portrait"
-        />
-        <motion.img
-          initial={{ opacity: 1 }}
-          animate={{
-            opacity: 0,
-            transition: { delay: 1.2, duration: 1.5 },
-          }}
-          src={profile}
           alt="portrait"
         />
       </div>

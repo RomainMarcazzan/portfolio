@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 const NavBarHome = () => {
   return (
     <motion.div exit={{ opacity: 0 }} className="navBarHome">
-      <div className="navBarHome__container">
+      <Link to="/about" className="navBarHome__container">
         <motion.span
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1.5 }}
         >
-          <Link to="/about">Profil</Link>
+          Profil
         </motion.span>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
           <motion.path
@@ -23,14 +23,14 @@ const NavBarHome = () => {
             transition={{ delay: 0.8, duration: 1.6 }}
           ></motion.path>
         </svg>
-      </div>
-      <div className="navBarHome__container">
+      </Link>
+      <Link to="/projects" className="navBarHome__container">
         <motion.span
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1.5 }}
         >
-          <Link to="/projects">Projets</Link>
+          Projets
         </motion.span>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
           <motion.path
@@ -43,14 +43,14 @@ const NavBarHome = () => {
             transition={{ delay: 0.8, duration: 1.5 }}
           ></motion.path>
         </svg>
-      </div>
-      <div className="navBarHome__container">
+      </Link>
+      <Link to="/contact" className="navBarHome__container">
         <motion.span
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1.5 }}
         >
-          <Link to="/contact">Contact</Link>
+          Contact
         </motion.span>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
           <motion.path
@@ -63,7 +63,7 @@ const NavBarHome = () => {
             transition={{ delay: 0.8, duration: 1.5 }}
           ></motion.path>
         </svg>
-      </div>
+      </Link>
     </motion.div>
   );
 };

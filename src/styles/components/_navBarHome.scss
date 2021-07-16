@@ -6,19 +6,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    &:hover {
+      span::after {
+        width: 100%;
+        left: 0;
+        background: $whiteFont;
+      }
+    }
     svg {
       height: 4rem;
       overflow: visible;
     }
-    a {
-      display: block;
-      text-decoration: none;
-      padding-bottom: 1.5vh;
-      position: relative;
-      cursor: pointer;
+    span {
       color: $whiteFont;
-
-      &:after {
+      padding-bottom: 2vh;
+      position: relative;
+      &::after {
         content: "";
         position: absolute;
         width: 0;
@@ -29,13 +32,6 @@
         background: $whiteFont;
         transition: 0.4s ease;
       }
-      &:hover {
-        &:after {
-          width: 100%;
-          left: 0;
-          background: $whiteFont;
-        }
-      }
     }
   }
 }
@@ -43,13 +39,11 @@
 @media screen and (min-width: 767px) {
   .navBarHome {
     &__container {
+      font-size: 2rem;
+
       & svg {
         height: 7rem;
       }
-    }
-
-    a {
-      font-size: 2rem;
     }
   }
 }

@@ -5,7 +5,6 @@
 
   &__info {
     position: absolute;
-    color: white;
     height: 30vh;
     top: 70vh;
     margin-left: auto;
@@ -17,12 +16,13 @@
     align-items: center;
     justify-content: space-evenly;
     &__email {
+      color: black;
       & a {
         text-decoration: none;
-        color: white;
       }
     }
     &__address {
+      color: black;
       display: flex;
       flex-direction: column;
       align-items: center;

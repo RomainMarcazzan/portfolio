@@ -20,17 +20,17 @@ const Banner = () => {
           <span>Web</span> & <span>App</span>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, x: -200 }}
           animate={{
             opacity: 1,
-            y: 0,
+            x: 0,
             transition: { delay: 0.2, duration: 0.5 },
           }}
           className="banner__left__description"
         >
           Développeur web et mobile fullstack basé à La Réunion, spécialisé
-          React et React Native pour le frontend et NodeJs pour le backend;
-          technologies qui permettent de créer des sites et applications
+          React et React Native pour le frontend et NodeJs pour le backend.
+          Technologies qui permettent de créer des sites et applications
           modernes, dynamiques et performants.
         </motion.div>
       </div>

@@ -33,6 +33,7 @@ const ProjectsPage = () => {
     video: null,
     key: null,
   });
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -50,6 +51,7 @@ const ProjectsPage = () => {
       <div className="projectsPage__container">
         <div className="projectsPage__container__top">
           <video
+            id="videoId"
             src={selectedVideo.video}
             type="video/mp4"
             autoPlay
@@ -99,7 +101,7 @@ const ProjectsPage = () => {
                   });
                 }}
                 onClick={() => {
-                  devise > 768
+                  devise > 769
                     ? setSelectedVideo({
                         showVideo: true,
                         showNav: false,

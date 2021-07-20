@@ -1,21 +1,23 @@
 import { AnimatePresence } from "framer-motion";
-import { Switch, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ContactPage from "./pages/ContactPage";
-
+import NotFoundPage from "./pages/NotFoundPage";
 function App() {
-  const location = useLocation();
   return (
-    <AnimatePresence exitBeforeEnter>
-      <Switch location={location} key={location.pathname}>
-        <Route path="/" exact component={HomePage} />
-        <Route path="/about" component={AboutPage} />
-        <Route path="/projects" component={ProjectsPage} />
-        <Route path="/contact" component={ContactPage} />
-      </Switch>
-    </AnimatePresence>
+    <BrowserRouter>
+      <AnimatePresence exitBeforeEnter>
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/about" component={AboutPage} />
+          <Route path="/projects" component={ProjectsPage} />
+          <Route path="/contact" component={ContactPage} />
+          <Route path="*" component={NotFoundPage} />
+        </Switch>
+      </AnimatePresence>
+    </BrowserRouter>
   );
 }
 

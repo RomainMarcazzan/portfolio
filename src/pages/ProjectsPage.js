@@ -51,13 +51,12 @@ const ProjectsPage = () => {
       <div className="projectsPage__container">
         <div className="projectsPage__container__top">
           <video
-            id="videoId"
             src={selectedVideo.video}
             type="video/mp4"
             autoPlay
             loop
             muted
-            controls
+            controls={devise > 769 ? true : false}
           />
           <motion.div
             initial={{ height: "75%" }}

@@ -6,7 +6,6 @@ import netflix_clone from "../assets/videos/netflix.mp4";
 import meal_app from "../assets/videos/meal-app.mp4";
 
 const ProjectsPage = () => {
-  const devise = window.innerWidth;
   const videoRoutes = [
     {
       id: 0,
@@ -28,10 +27,9 @@ const ProjectsPage = () => {
     },
   ];
   const [selectedVideo, setSelectedVideo] = useState({
-    showVideo: false,
-    showNav: true,
     video: null,
     key: null,
+    init: "100%",
   });
 
   return (
@@ -47,78 +45,47 @@ const ProjectsPage = () => {
       }}
       className="projectsPage"
     >
-      {selectedVideo.showNav ? <NavBar isShown /> : <NavBar />}
+      <NavBar isShown />
       <div className="projectsPage__container">
         <div className="projectsPage__container__top">
-          <video
-            src={selectedVideo.video}
-            type="video/mp4"
-            autoPlay
-            loop
-            muted
-            controls={devise > 769 ? true : false}
-          />
-          <motion.div
-            initial={{ height: "75%" }}
-            animate={
-              selectedVideo.showVideo
-                ? {
-                    height: "0%",
-                    transition: {
-                      ease: "easeIn",
-                    },
-                  }
-                : {
-                    height: "75%",
-                    transition: {
-                      ease: "easeOut",
-                    },
-                  }
-            }
-            className="projectsPage__container__top--overlay"
-          />
-        </div>
-        <div className="projectsPage__container__bottom">
           <ul>
             {videoRoutes.map((videoRoute) => (
               <motion.li
                 key={videoRoute.id}
-                onHoverStart={() => {
+                onClick={() => {
                   setSelectedVideo({
-                    showVideo: true,
-                    showNav: false,
                     video: videoRoute.ref.current,
                     key: videoRoute.id,
+                    anim: "0%",
                   });
-                }}
-                onHoverEnd={() => {
-                  setSelectedVideo({
-                    showVideo: false,
-                    showNav: true,
-                    video: null,
-                    key: null,
-                  });
-                }}
-                onClick={() => {
-                  devise > 769
-                    ? setSelectedVideo({
-                        showVideo: true,
-                        showNav: false,
-                        video: videoRoute.ref.current,
-                        key: videoRoute.id,
-                      })
-                    : setSelectedVideo({
-                        showVideo: true,
-                        showNav: true,
-                        video: videoRoute.ref.current,
-                        key: videoRoute.id,
-                      });
                 }}
               >
                 {videoRoute.title} <span>{videoRoute.technos}</span>
               </motion.li>
             ))}
           </ul>
+        </div>
+        <div className="projectsPage__container__bottom">
+          <video
+            src={selectedVideo.video}
+            type="video/mp4"
+            autoPlay
+            loop
+            muted
+            controls
+          />
+
+          <motion.div
+            initial={{ height: selectedVideo.init }}
+            animate={{
+              height: selectedVideo.anim,
+              transition: {
+                ease: "easeInOut",
+                duration: 0.8,
+              },
+            }}
+            className="projectsPage__container__bottom--overlay"
+          />
         </div>
       </div>
     </motion.div>

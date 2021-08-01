@@ -6,6 +6,8 @@ import netflix_clone from "../assets/videos/netflix.mp4";
 import meal_app from "../assets/videos/meal-app.mp4";
 
 const ProjectsPage = () => {
+  const devise = window.innerWidth;
+
   const videoRoutes = [
     {
       id: 0,
@@ -72,7 +74,7 @@ const ProjectsPage = () => {
             autoPlay
             loop
             muted
-            controls
+            controls={devise <= 768 ? false : true}
           />
 
           <motion.div

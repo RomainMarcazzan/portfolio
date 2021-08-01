@@ -21,7 +21,7 @@ const NavBarHome = () => {
             initial={{ pathLength: 0 }}
             animate={{ pathLength: 1 }}
             transition={{ delay: 0.8, duration: 1.6 }}
-          ></motion.path>
+          />
         </svg>
       </Link>
       <Link to="/projects" className="navBarHome__container">
@@ -41,7 +41,7 @@ const NavBarHome = () => {
             initial={{ pathLength: 0 }}
             animate={{ pathLength: 1 }}
             transition={{ delay: 0.8, duration: 1.5 }}
-          ></motion.path>
+          />
         </svg>
       </Link>
       <Link to="/contact" className="navBarHome__container">
@@ -61,7 +61,7 @@ const NavBarHome = () => {
             initial={{ pathLength: 0 }}
             animate={{ pathLength: 1 }}
             transition={{ delay: 0.8, duration: 1.5 }}
-          ></motion.path>
+          />
         </svg>
       </Link>
     </motion.div>

@@ -1,7 +1,7 @@
 import React from "react";
 import AnimateLetters from "./AnimateLetters";
 import { motion } from "framer-motion";
-import portrait from "../assets/photos/portrait.png";
+import portrait from "../assets/photos/portrait.webp";
 
 const Banner = () => {
   return (

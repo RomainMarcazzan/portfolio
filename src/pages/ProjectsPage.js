@@ -47,6 +47,7 @@ const ProjectsPage = () => {
                   setSelectedVideo({
                     video: videoRoute.ref.current,
                     key: videoRoute.id,
+                    init: "0%",
                     anim: "0%",
                   });
                 }}
@@ -64,7 +65,6 @@ const ProjectsPage = () => {
             loop
             muted
             controls={devise <= 768 ? false : true}
-            preload="auto"
           />
 
           <motion.div

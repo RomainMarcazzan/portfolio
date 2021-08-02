@@ -64,6 +64,7 @@ const ProjectsPage = () => {
             loop
             muted
             controls={devise <= 768 ? false : true}
+            preload="auto"
           />
 
           <motion.div

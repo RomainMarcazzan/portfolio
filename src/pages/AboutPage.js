@@ -51,8 +51,8 @@ const AboutPage = () => {
           dragElastic={1}
           className="aboutPage__card"
         >
-          FRONTEND: React, Redux, Context Api, hooks, React-Native, Sass,
-          ThreeJS...
+          FRONTEND: React, Redux, Context Api, hooks, React-Native, NextJs,
+          Sass, ThreeJS...
         </motion.div>
       </div>
     </div>

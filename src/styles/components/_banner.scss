@@ -38,7 +38,8 @@
   }
   &__right {
     & img {
-      width: 70vw;
+      height: 200px;
+      width: 100%;
     }
   }
 }
@@ -67,7 +68,7 @@
     }
     &__right {
       & img {
-        width: 30vw;
+        height: 35vw;
       }
     }
   }
@@ -97,7 +98,7 @@
     }
     &__right {
       & img {
-        width: 22vw;
+        height: 22vw;
       }
     }
   }

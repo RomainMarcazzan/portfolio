@@ -17,7 +17,6 @@ const NavBar = ({ isShown }) => {
           },
         }
       }
-      // exit={{ opacity: 0 }}
       className="navBar"
     >
       <NavLink

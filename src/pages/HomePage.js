@@ -1,15 +1,12 @@
-import React, { Suspense } from "react";
-import Loader from "../components/Loader";
-const Banner = React.lazy(() => import("../components/Banner"));
-const NavBarHome = React.lazy(() => import("../components/NavBarHome"));
+import React from "react";
+import Banner from "../components/Banner";
+import NavBarHome from "../components/NavBarHome";
 
 const HomePage = () => {
   return (
     <div className="homePage">
-      <Suspense fallback={<Loader />}>
-        <Banner />
-        <NavBarHome />
-      </Suspense>
+      <Banner />
+      <NavBarHome />
     </div>
   );
 };

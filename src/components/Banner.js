@@ -1,7 +1,7 @@
 import React from "react";
 import AnimateLetters from "./AnimateLetters";
 import { motion } from "framer-motion";
-import portrait from "../assets/photos/portrait.webp";
+import portrait from "../assets/photos/portrait.png";
 
 const Banner = () => {
   return (
@@ -39,7 +39,7 @@ const Banner = () => {
           initial={{ opacity: 0 }}
           animate={{
             opacity: 0.8,
-            transition: { delay: 0.5, duration: 1, ease: "easeOut" },
+            transition: { delay: 1, duration: 1, ease: "easeOut" },
           }}
           src={portrait}
           alt="portrait"

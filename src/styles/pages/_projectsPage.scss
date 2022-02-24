@@ -32,25 +32,21 @@
     }
 
     &__bottom {
-      // height: 50vh;
+      height: 50vh;
       width: 100vw;
       position: relative;
       & video {
         width: 100%;
-        object-fit: contain;
+        // object-fit: contain;
       }
       &--overlay {
-        background-color: $redProjects;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
+        display: none;
       }
     }
   }
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 769px) {
   .projectsPage {
     &__container {
       align-items: inherit;
@@ -72,6 +68,15 @@
         & video {
           object-fit: inherit;
           height: 100%;
+        }
+        &--overlay {
+          z-index: 1000;
+          display: block;
+          background-color: $redProjects;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
         }
       }
     }

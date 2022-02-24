@@ -1,10 +1,10 @@
 .aboutPage {
   position: relative;
-  background-image: url("../../assets/photos/reunion.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
+  // background-image: url("../../assets/images/reunion.jpg");
+  // background-repeat: no-repeat;
+  // background-position: center;
   height: 100vh;
-  background-size: cover;
+  // background-size: cover;
   &__container {
     & div:nth-child(1) {
       position: absolute;
@@ -29,7 +29,7 @@
   &__card {
     width: 20vw;
     cursor: grab;
-    color: white;
+    color: black;
     padding: 3vw;
     text-align: center;
     height: auto;
@@ -46,18 +46,18 @@
 @media screen and (min-width: 767px) {
   .aboutPage {
     &__container {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       & div:nth-child(1) {
-        top: 72vh;
-        right: 10vw;
+        top: 20vh;
+        right: 20vw;
       }
       & div:nth-child(2) {
-        top: 40vh;
-        right: 40vw;
+        top: 20vh;
+        right: 65vw;
       }
       & div:nth-child(3) {
-        top: 18vh;
-        right: 60vw;
+        top: 60vh;
+        right: 8vw;
       }
     }
 

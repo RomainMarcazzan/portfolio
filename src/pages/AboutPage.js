@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import NavBar from "../components/NavBar";
+import Scene from "../components/Scene";
 
 const AboutPage = () => {
   const animate = {
@@ -30,6 +31,7 @@ const AboutPage = () => {
       className="aboutPage"
     >
       <NavBar isShown />
+      <Scene />
       <div className="aboutPage__container">
         <motion.div
           initial={{ x: 100 }}
@@ -39,7 +41,7 @@ const AboutPage = () => {
           dragElastic={1}
           className="aboutPage__card"
         >
-          BACKEND: Express, Sequelize, MySql, MongoDb, Firebase...
+          BACKEND: NodeJs, Express, MongoDb, Firebase, MySql...
         </motion.div>
         <motion.div
           initial={{ y: 200, x: -100 }}
@@ -49,10 +51,10 @@ const AboutPage = () => {
           dragElastic={1}
           className="aboutPage__card"
         >
-          Je suis développeur, diplômé Bac+2, basé à Saint Denis de la Réunion.
-          J'utilise des technologies JavaScript modernes pour la création de
-          sites web et applications mobiles. N'hésitez pas à me contacter pour
-          parler de votre projet.
+          Je suis développeur basé à Saint Denis de la Réunion. J'utilise des
+          technologies JavaScript modernes pour la création de sites web et
+          applications mobiles. N'hésitez pas à me contacter pour parler de
+          votre projet.
         </motion.div>
         <motion.div
           initial={{ x: 100 }}
@@ -62,8 +64,8 @@ const AboutPage = () => {
           dragElastic={1}
           className="aboutPage__card"
         >
-          FRONTEND: React, Redux, Context Api, hooks, React-Native, NextJs,
-          Sass, ThreeJS...
+          FRONTEND: React, Redux, React-Native, NextJs, Vue, Nuxt Sass,
+          ThreeJS...
         </motion.div>
       </div>
     </motion.div>

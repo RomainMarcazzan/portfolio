@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import confused from "../assets/photos/confused.gif";
+import confused from "../assets/images/confused.gif";
 const NotFoundPage = () => {
   return (
     <div className="notFoundPage">

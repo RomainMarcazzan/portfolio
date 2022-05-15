@@ -43,7 +43,7 @@
   }
 }
 
-@media screen and (min-width: 767px) and (max-width: 1023px) {
+@include screen-Tablet {
   .banner {
     flex-direction: row;
     justify-content: center;
@@ -73,16 +73,12 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@include screen-Laptop {
   .banner {
-    flex-direction: row;
-    justify-content: center;
     &__left {
       width: 50vw;
-
       &__name {
         .animate-letters {
-          margin-right: 1vw;
           font-size: 3.5rem;
         }
       }
@@ -102,3 +98,91 @@
     }
   }
 }
+
+@include screen-Laptop4K {
+  .banner {
+    &__left {
+      width: 50vw;
+
+      &__name {
+        .animate-letters {
+          margin-right: 1vw;
+          font-size: 5.5rem;
+        }
+      }
+      &__title {
+        font-size: 3rem;
+        padding-left: 12vw;
+      }
+      &__description {
+        padding: 6vh;
+        font-size: 2.5rem;
+      }
+    }
+    &__right {
+      & img {
+        height: 22vw;
+      }
+    }
+  }
+}
+
+// @media screen and (min-width: 767px) and (max-width: 1023px) {
+//   .banner {
+//     flex-direction: row;
+//     justify-content: center;
+//     &__left {
+//       width: 50vw;
+
+//       &__name {
+//         .animate-letters {
+//           margin-right: 1vw;
+//           font-size: 2.5rem;
+//         }
+//       }
+//       &__title {
+//         font-size: 2rem;
+//         padding-left: 4vw;
+//       }
+//       &__description {
+//         padding: 2vh;
+//         font-size: 1.5rem;
+//       }
+//     }
+//     &__right {
+//       & img {
+//         height: 35vw;
+//       }
+//     }
+//   }
+// }
+
+// @media screen and (min-width: 1024px) {
+//   .banner {
+//     flex-direction: row;
+//     justify-content: center;
+//     &__left {
+//       width: 50vw;
+
+//       &__name {
+//         .animate-letters {
+//           margin-right: 1vw;
+//           font-size: 3.5rem;
+//         }
+//       }
+//       &__title {
+//         font-size: 2rem;
+//         padding-left: 12vw;
+//       }
+//       &__description {
+//         padding: 4vh;
+//         font-size: 1.5rem;
+//       }
+//     }
+//     &__right {
+//       & img {
+//         height: 22vw;
+//       }
+//     }
+//   }
+// }

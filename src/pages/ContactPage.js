@@ -35,7 +35,7 @@ const ContactPage = () => {
           position={[0, 2, 0]}
           rotation={[0, 0, 0]}
         >
-          +262 (0)6.92.25.32.94
+          06.92.25.32.94
         </Text>
       </Canvas>
       <div className="contactPage__info">

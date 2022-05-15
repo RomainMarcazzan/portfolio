@@ -5,6 +5,8 @@ import { shaderMaterial } from "@react-three/drei";
 import glsl from "babel-plugin-glsl/macro";
 import reunion from "../assets/images/reunion.jpg";
 
+const devise = window.innerWidth;
+console.log(devise);
 const WaveShaderMaterial = shaderMaterial(
   // Uniforms
   { uTime: 0, uColor: new THREE.Color(0.0, 0.0, 0.0), uTexture: [] },
@@ -56,7 +58,11 @@ const Wave = () => {
   const [image] = useLoader(THREE.TextureLoader, [reunion]);
   return (
     <mesh>
-      <planeBufferGeometry args={[1, 0.7, 16, 16]} />
+      {devise <= 425 ? (
+        <planeBufferGeometry args={[0.5, 0.4, 16, 16]} />
+      ) : (
+        <planeBufferGeometry args={[0.9, 0.6, 16, 16]} />
+      )}
       <waveShaderMaterial uTexture={image} uColor="hotpink" ref={ref} />
     </mesh>
   );

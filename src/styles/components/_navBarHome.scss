@@ -47,3 +47,15 @@
     }
   }
 }
+
+@include screen-Laptop4K {
+  .navBarHome {
+    &__container {
+      font-size: 3rem;
+
+      & svg {
+        height: 12rem;
+      }
+    }
+  }
+}

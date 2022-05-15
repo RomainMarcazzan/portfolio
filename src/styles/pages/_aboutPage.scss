@@ -1,68 +1,123 @@
 .aboutPage {
   position: relative;
-  // background-image: url("../../assets/images/reunion.jpg");
-  // background-repeat: no-repeat;
-  // background-position: center;
   height: 100vh;
-  // background-size: cover;
   &__container {
     & div:nth-child(1) {
       position: absolute;
-      top: 72vh;
+      top: 85vh;
       right: 8vw;
       z-index: 1;
     }
     & div:nth-child(2) {
       position: absolute;
-      top: 29vh;
-      right: 27vw;
+      top: 15vh;
+      right: 10vw;
       z-index: 1;
     }
     & div:nth-child(3) {
       position: absolute;
-      top: 11vh;
-      right: 51vw;
+      top: 65vh;
+      right: 30vw;
       z-index: 1;
+    }
+
+    @include screen-Tablet {
+      & div:nth-child(1) {
+        top: 70vh;
+        right: 60vw;
+      }
+      & div:nth-child(2) {
+        top: 20vh;
+        right: 10vw;
+      }
+      & div:nth-child(3) {
+        top: 80vh;
+        right: 10vw;
+      }
+    }
+    @include screen-LaptopL {
+      & div:nth-child(1) {
+        top: 60vh;
+        right: 60vw;
+      }
+      & div:nth-child(2) {
+        top: 15vh;
+        right: 10vw;
+      }
+      & div:nth-child(3) {
+        top: 75vh;
+        right: 10vw;
+      }
     }
   }
 
   &__card {
-    width: 20vw;
+    width: 50vw;
     cursor: grab;
     color: black;
     padding: 3vw;
     text-align: center;
-    height: auto;
-    width: 40vw;
     background: rgba(255, 255, 255, 0.05);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(2.5px);
     -webkit-backdrop-filter: blur(2.5px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
-  }
-}
-
-@media screen and (min-width: 767px) {
-  .aboutPage {
-    &__container {
-      font-size: 1.3rem;
-      & div:nth-child(1) {
-        top: 20vh;
-        right: 20vw;
-      }
-      & div:nth-child(2) {
-        top: 20vh;
-        right: 65vw;
-      }
-      & div:nth-child(3) {
-        top: 60vh;
-        right: 8vw;
-      }
+    @include screen-Tablet {
+      width: 30vw;
     }
-
-    &__card {
-      width: 20vw;
+    @include screen-Laptop {
+      font-size: 1.4rem;
+    }
+    @include screen-Laptop4K {
+      font-size: 2rem;
     }
   }
 }
+
+// @include screen-Tablet {
+//   .aboutPage {
+//     &__container {
+//       font-size: 1.3rem;
+//       & div:nth-child(1) {
+//         top: 20vh;
+//         right: 20vw;
+//       }
+//       & div:nth-child(2) {
+//         top: 20vh;
+//         right: 65vw;
+//       }
+//       & div:nth-child(3) {
+//         top: 60vh;
+//         right: 8vw;
+//       }
+//     }
+
+//     &__card {
+//       width: 20vw;
+//     }
+//   }
+// }
+// @media screen and (min-width: 767px) {
+//   .aboutPage {
+//     &__container {
+//       font-size: 1.3rem;
+//       & div:nth-child(1) {
+//         top: 20vh;
+//         right: 20vw;
+//       }
+//       & div:nth-child(2) {
+//         top: 20vh;
+//         right: 65vw;
+//       }
+//       & div:nth-child(3) {
+//         top: 60vh;
+//         right: 8vw;
+//       }
+//     }
+
+//     &__card {
+//       width: 20vw;
+//     }
+//   }
+// }

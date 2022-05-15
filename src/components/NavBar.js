@@ -6,7 +6,7 @@ const NavBar = ({ isShown }) => {
     fontWeight: "700",
   };
   return (
-    <motion.div
+    <motion.header
       initial={{ y: -180 }}
       animate={
         isShown && {
@@ -52,7 +52,7 @@ const NavBar = ({ isShown }) => {
       >
         Contact
       </NavLink>
-    </motion.div>
+    </motion.header>
   );
 };
 

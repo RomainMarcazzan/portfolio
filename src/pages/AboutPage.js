@@ -18,7 +18,7 @@ const AboutPage = () => {
   };
 
   return (
-    <motion.div
+    <motion.main
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -64,11 +64,11 @@ const AboutPage = () => {
           dragElastic={1}
           className="aboutPage__card"
         >
-          FRONTEND: React, Redux, React-Native, NextJs, Vue, Nuxt Sass,
+          FRONTEND: React, Redux, React-Native, NextJs, Vue, Nuxt, Sass,
           ThreeJS...
         </motion.div>
       </div>
-    </motion.div>
+    </motion.main>
   );
 };
 

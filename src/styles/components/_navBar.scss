@@ -9,11 +9,14 @@
   justify-content: space-evenly;
   color: $blackHome;
   font-weight: 400;
+  @include screen-Laptop4K {
+    font-size: 2rem;
+  }
   .activeNav {
-    transition: all 0.2s ease-in-out;
+    transition: all 0.1s ease-in-out;
   }
   .activeNav:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
   .noHover:hover {
     transform: inherit;
